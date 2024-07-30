@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\Auth\AuthController;
 use App\Http\Controllers\Api\Admin\UserController;
 use App\Http\Controllers\Api\Admin\CurrencyController;
 use App\Http\Controllers\Api\Admin\CategoryController;
+use App\Http\Controllers\Api\Admin\SliderController;
 
 
 
@@ -76,6 +77,11 @@ Route::middleware(['auth:api','admin'])->group(function(){
     Route::get('/categories', [CategoryController::class, 'index']);
     Route::post('/category/update', [CategoryController::class, 'update']);
     Route::post('/category/delete', [CategoryController::class, 'delete']);
+     //admin slider settings 
+    Route::post('/slider/store', [SliderController::class, 'store']);
+    Route::get('/sliders', [SliderController::class, 'index']);
+    Route::post('/slider/update', [SliderController::class, 'update']);
+    Route::post('/slider/delete', [SliderController::class, 'delete']);
  
 
    
