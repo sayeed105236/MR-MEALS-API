@@ -1,0 +1,9 @@
+[27-Jul-2024 17:25:40 UTC] PHP Warning:  require(/home/dotprogrammers/meals.dotprogrammers.com/vendor/autoload.php): Failed to open stream: No such file or directory in /home/dotprogrammers/meals.dotprogrammers.com/artisan on line 18
+[27-Jul-2024 17:25:40 UTC] PHP Warning:  require(/home/dotprogrammers/meals.dotprogrammers.com/vendor/autoload.php): Failed to open stream: No such file or directory in /home/dotprogrammers/meals.dotprogrammers.com/artisan on line 18
+[27-Jul-2024 17:25:40 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/dotprogrammers/meals.dotprogrammers.com/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/dotprogrammers/meals.dotprogrammers.com/artisan:18
+Stack trace:
+#0 {main}
+  thrown in /home/dotprogrammers/meals.dotprogrammers.com/artisan on line 18
+[30-Jul-2024 16:23:27 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.29. in /home/dotprogrammers/meals.dotprogrammers.com/vendor/composer/platform_check.php on line 24
+[30-Jul-2024 16:30:46 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.29. in /home/dotprogrammers/meals.dotprogrammers.com/vendor/composer/platform_check.php on line 24
+[30-Jul-2024 16:57:21 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.29. in /home/dotprogrammers/meals.dotprogrammers.com/vendor/composer/platform_check.php on line 24
