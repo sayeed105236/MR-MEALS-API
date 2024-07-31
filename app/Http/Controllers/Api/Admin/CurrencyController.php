@@ -12,7 +12,11 @@ class CurrencyController extends Controller
     public function index()
     {
         $currencies= Currency::where('is_deleted',0)->get();
-        return response()->json([$currencies]);
+         return response()->json([
+        'status'=>200,
+        'currencies'=> $currencies
+        ]);
+       // return response()->json([$currencies]);
     }
   
     

@@ -17,7 +17,11 @@ class CategoryController extends Controller
         {
             $category->category_icon = url('/public/storage/categories/'.$category->category_icon);
         }
-        return response()->json([$categories]);
+       // return response()->json([$categories]);
+         return response()->json([
+        'status'=>200,
+        'categories'=> $categories
+        ]);
     }
   
     
@@ -72,7 +76,7 @@ class CategoryController extends Controller
     // Return the saved data as JSON response
     return response()->json([
         'status'=>200,
-        'message'=> 'Currency added successfully',
+        'message'=> 'Category added successfully',
         'category' => $category]);
         
     }
@@ -152,7 +156,7 @@ class CategoryController extends Controller
               $filename2
           );
 
-          $data['$category_icon'] = $filename2;
+          $data['category_icon'] = $filename2;
        } elseif (empty($oldfileexists2)) {
           // throw new \Exception('Client image not found!');
           $uploadedFile2 = null;

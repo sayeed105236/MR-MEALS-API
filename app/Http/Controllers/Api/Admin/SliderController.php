@@ -16,9 +16,12 @@ class SliderController extends Controller
         $sliders= Slider::where('is_deleted',0)->get();
         foreach($sliders as $slider)
         {
-            $slider->image = url('/public/storage/sliders/'.$category->category_icon);
+            $slider->image = url('/public/storage/sliders/'.$slider->image);
         }
-        return response()->json([$sliders]);
+        return response()->json([
+        'status'=>200,
+        'sliders'=> $sliders
+        ]);
     }
   
     
@@ -49,6 +52,7 @@ class SliderController extends Controller
     
     $slider = new Slider();
     $slider->page_name = $validatedData['page_name'];
+    $slider->slider_text = $request->slider_text;
     
     $slider->image = $filename;
    
@@ -122,6 +126,7 @@ class SliderController extends Controller
     
  
     $slider->image = $filename;
+    $slider->slider_text = $request->slider_text;
     $slider->status = $request->status;
    
     $slider->save();
